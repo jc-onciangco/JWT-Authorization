@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {margin:0;padding:0;box-sizing:border-box;}
+        body {height:100vh;width:100%;background-color: azure;}
+
+        .user {
+            background-color: azure;
+            height: 70%;
+            width: 500px;
+            border-radius: 7px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 6px 10px rgb(0,0,0,0.8),
+                        inset 0 -6px 10px rgba(0,0,0,0.4),
+                        inset 0 5px 12px white;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            padding: 20px;
+        }
+
+        .post-user .head .title {
+            color: coral;
+        }
+
+        .post-user .head .author {
+            color: rgba(0,0,0,0.3);
+        }
+
+        .post {
+            margin-top: 20px;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        .logout {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            background-color: coral;
+            padding: 6px 12px;
+            border-radius: 100px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            cursor: pointer;
+        }
+
+        .logout a {
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+<div class="logout">
+    <a href="/logout">
+        Log out
+    </a>
+</div>
+<div class="user">
+    <div class="post-user">
+        <div class="head">
+            <h1 class="title"><%=post.title%></h1>
+            <p class="author">By: <%=user.username%></p>
+        </div>
+        <p class="post"><%=post.post%></p>
+    </div>
+</div>   
+</body>
+</html>

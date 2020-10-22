@@ -1,0 +1,10 @@
+GET http://localhost:8000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiVXdhbmciLCJpYXQiOjE2MDEyMTI0MTN9.xsFLmOXEaoDdGDYu3bDiXu-_yuE3iKA7RDqMlYa0OZ0
+###
+
+POST http://localhost:8000/login
+Content-Type: application/json
+
+{
+    "username" : "Uwang"
+}
